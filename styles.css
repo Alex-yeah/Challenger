@@ -1,0 +1,128 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Polices Google Fonts */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #041821; /* Ajout de la couleur de fond */
+    color: #fff; /* Changement de la couleur du texte pour qu'il soit lisible sur le fond sombre */
+}
+
+header {
+    display: flex;
+    justify-content: space-between ; 
+    align-items: center;
+}
+
+
+.custom-color {
+    color: #1dd59c;
+ 
+}
+
+
+
+
+
+
+main {
+    padding: 2rem;
+}
+
+/* Galerie d'images */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Afficher 4 images par rangée */
+    gap: 0.25rem; /* Réduire l'espace entre les colonnes */
+    width:80%;
+    margin: 0 auto; /* Centre les images horizontalement */
+    align-content: center; /* Centre les images verticalement */
+    
+
+    
+
+}
+
+.entete {
+    width: 50%;
+    margin:auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between ; 
+    align-items: center;
+
+
+   }
+ 
+ .entete div {
+     text-align: center;
+     color: white;
+     width: 20%;  
+     float:left; 
+     font-family: "Montserrat", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400 ;
+     font-style: normal;
+ 
+ }
+
+.grid img {
+    width: 100%; /* Les images prennent toute la largeur de leur colonne */
+    height: auto;
+    
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Masquer les images après la 10ème */
+.grid img:nth-child(n + 10) {
+    display: none;
+}
+
+main h1 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media all and(max-width:768px){
+    .header {
+    flex-direction: column; 
+    }
+}
+
+.espace {
+    margin-top: 2rem;
+}
+
+#surligner {
+    background-color:#1dd59c;
+}
